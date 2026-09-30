@@ -18,7 +18,7 @@ the_box = {
 }
 
 #Create a variable pointing to the data file
-file_name = 'data/raw/MoveBank/Satellite tracking of black-capped petrels 2019-argos.csv'
+file_name = 'V:/VS Python/Argos_Tracking_Project/Data/Raw Data/Satellite tracking of black-capped petrels 2019-argos.csv'
 
 #Read the contents of the file into a list of lines
 with open(file_name,'r') as f:
