@@ -17,8 +17,16 @@ the_box = {
     'y_max' : -75.00
 }
 
+#Create a variable pointing to the data file
+file_name = 'data/raw/MoveBank/Satellite tracking of black-capped petrels 2019-argos.csv'
+
+#Read the contents of the file into a list of lines
+with open(file_name,'r') as f:
+    #Read contents of file into a list
+	line_list = f.readlines()
+
 # Copy and paste a line of data as the lineString variable value
-lineString = '10154641241,true,2019-05-14 21:51:05.000,-75.83004,33.81759,,0.0,-121.0,4.0167971327E8,598.0,219,"48",33.81759,33.81759,"1",-75.83004,-75.83004,10,0,3,90.0,679.0,1992.0,179.0,155,193,2,0,"1",,,"argos-doppler-shift","Pterodroma hasitata","174441","HA09","Satellite tracking of black-capped petrels, 2019"'
+lineString = line_list[250]
     
 # Use the split command to parse the items in lineString into a list object
 line_data = lineString.split(',')
@@ -39,9 +47,4 @@ if lat_condition & lon_condition:
     print(f'Record {event_id}: {tag_id} was IN the box at {timestamp}')
 else:
     print(f'Record {event_id}: {tag_id} was NOT IN the box at {timestamp}')
-
-#Set a variable to the CSV filename
-the_filename = 'V:/VS Python/Argos_Tracking_Project/Data/Raw Data/Satellite tracking of black-capped petrels 2019-argos.csv'
-#Create a file object pointing to file name
-f = open(the_filename,'r')
 
