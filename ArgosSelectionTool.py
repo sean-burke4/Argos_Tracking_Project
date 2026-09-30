@@ -40,3 +40,8 @@ if lat_condition & lon_condition:
 else:
     print(f'Record {event_id}: {tag_id} was NOT IN the box at {timestamp}')
 
+#Set a variable to the CSV filename
+the_filename = 'V:/VS Python/Argos_Tracking_Project/Data/Raw Data/Satellite tracking of black-capped petrels 2019-argos.csv'
+#Create a file object pointing to file name
+f = open(the_filename,'r')
+
